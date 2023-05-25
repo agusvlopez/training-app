@@ -27,30 +27,37 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li><hr class="border-light"></li>
                   <li class="nav-item"
                     v-for="item in links"
                     :class="'nav-item' + (item.active ? ' active' : '')"
+                    v-if="item.enable || login"
                     >
-                    <a class="nav-link active text-white" aria-current="page" href="#">{{item.text}}</a>
-                  </li>
-                  <li><hr class="border-light"></li>
+                    <a class="nav-link active text-white" aria-current="page" href="#">
+                        {{item.text}}
+                    </a>
+                  </li>                 
                 </ul>
-
-                <form class="d-flex" role="search">  
-                    <span class="text-light p-1">¿Ya tenés una cuenta?</span>         
-                  <button class="btn btn-outline-light rounded-0 text-uppercase" type="submit">Iniciar Sesión</button>
-                </form>
               </div>
             </div>
           </nav>
 
         <!-- esto seria el contenido del Home -->
-        <div>
-            <img src="img/portada.jpg" alt="Chicas haciendo ejercicio aerobico" class="img-fluid">
-            <h1 class="d-none">App de entrenamientos</h1>
-        </div>
-           
+        <section>
+            <div>
+                <img src="img/portada.jpg" alt="Chicas haciendo ejercicio aerobico" class="img-fluid">
+                <h1 class="d-none">App de entrenamientos</h1>
+            </div>
+            <form class="d-flex p-3" role="search">  
+                <p class="text-light text-uppercase">¿Ya tenés una cuenta?</p>         
+                <button 
+                @click="toogleLogin"
 
+                class="btn btn-outline-light rounded-0 text-uppercase" type="submit">
+                {{login ? 'Cerrar sesión' : 'Inicia Sesión'}}
+                </button>
+            </form>
+        </section>
 
 
     </div>
