@@ -1,6 +1,7 @@
 const app = new Vue ({
     el: '#contenedor',
     data: {
+        modalLogin: false,
         login: false,
         links: [
             {text: 'Home', url: '/', enable: true, active: true},
@@ -11,11 +12,11 @@ const app = new Vue ({
 
     methods: {
     mostrarModalLogin () {
-        this.login = true;
+        this.modalLogin = true;
     },
 
     cerrarModalLogin () {
-        this.login = false;
+        this.modalLogin = false;
     },
 
     toogleLogin() {
@@ -26,8 +27,15 @@ const app = new Vue ({
         }else {   // si esta logueado... cierro sesion
            
             this.login = false;
-        }
-              
+        }          
     },
+
+    iniciarSesion() {
+        this.login = true;
+        this.cerrarModalLogin();
+    },
+
+
+    
     }
 })
