@@ -88,15 +88,18 @@
                 <img src="img/portada.jpg" alt="Chicas haciendo ejercicio aerobico" class="img-fluid">
                 <h1 class="d-none">App de entrenamientos</h1>
             </div>
-            <form class="d-flex p-3" role="search">  
-                <p class="text-light text-uppercase">¿Ya tenés una cuenta?</p>         
+            <div :class="'p-3' + (login ? '' : ' d-flex justify-content-between')">  
+                <p class="text-light pt-1 mb-1 align-self-center"> {{login ? '' : '¿Ya tenés una cuenta?'}}</p>   
+                <a href="#" :class="'text-light text-uppercase' + (login ? ' link-entrenar mb-3' : '')">
+                  {{login ? '¡Empezar a entrenar!' : ''}} 
+                </a>    
                 <button 
                 @click="toogleLogin"
-
-                class="btn btn-outline-light rounded-0 text-uppercase" type="submit">
+                :class="'rounded-0 btn p-2'  + (login ? ' btn-link text-light ps-0' : ' btn-outline-light text-uppercase ')" type="submit">
                 {{login ? 'Cerrar sesión' : 'Inicia Sesión'}}
                 </button>
-            </form>
+            </div>
+
         </section>
 
 
