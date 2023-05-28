@@ -39,5 +39,5 @@ Vue.component('login-modal',{
     </div>
 </div>
     `,
-    props: ['modalLogin', 'cerrarModalLogin', 'iniciarSesion'],
+    props: ['modalLogin', 'cerrarModalLogin', 'iniciarSesion']
 })

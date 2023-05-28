@@ -6,6 +6,13 @@ body {
     background-color: #1B2021;
 }
 
+h1 {
+    color: whitesmoke;
+    font-size: 1.3rem;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
 .link-entrenar {
     text-decoration: none;
 }
