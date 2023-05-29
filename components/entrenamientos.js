@@ -70,7 +70,8 @@
              <button
              @click="abrirModal"
              :id="article.id"
-             class="btn btn-dark btn-outline-dark rounded-0 text-light">Guardar ejercicio</button>
+             class="btn btn-dark btn-outline-dark rounded-0 text-light">Guardar ejercicio
+             </button>
          </div>
          </div>
          </div>
