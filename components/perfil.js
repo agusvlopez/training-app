@@ -1,6 +1,13 @@
 Vue.component('perfil', {
+    data:function(){
+        return {
+
+            ejerciciosGuardados: [],
+
+        }
+      },
     template: 
-   ` <div>
+   ` <div class="p-2">
         <h1>Mi perfil</h1>
         <p class="text-light">Acá se encuentran tus ejercicios guardados</p>
         <div v-for="ejercicio in ejerciciosGuardados" class="container p-4">
@@ -12,9 +19,7 @@ Vue.component('perfil', {
    
                 <h2 class="card-title">{{ejercicio.title}}</h2>
                 <p class="card-text">{{ejercicio.description}}</p>
-                <button
-                @click="abrirModal"
-                class="btn btn-dark btn-outline-dark rounded-0 text-light">Guardar ejercicio</button>
+                
             </div>
             </div>
             </div>
@@ -22,5 +27,18 @@ Vue.component('perfil', {
         </div>
     </div>
     `,
-    props: ['ejerciciosGuardados']
+    props: ['title','img' ,'description'],
+
+    created(){
+        let data = localStorage.getItem('eGuardados')
+        if(data !== null) {
+            this.ejerciciosGuardados = JSON.parse(data);
+          }
+          console.log(data) 
+    },
+
+    methods: {
+
+
+    }
 })

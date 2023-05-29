@@ -2,7 +2,6 @@
     data:function(){
         return {
           ejerciciosGuardados: [],
-          validar: false,
           modal: false,
           articles: [
             {
@@ -61,46 +60,59 @@
 </div>
 
      <div class="container p-4">
-     <div  v-for="article in articles">
+     <div v-for="article in articles">
          <div class="m-2">
              <div class="card rounded-0" style="max-width: 18rem;">
                  <img :src="article.img" class="card-img-top" :alt="article.title">
             <div class="card-body">
-
              <h2 class="card-title">{{article.title}}</h2>
              <p class="card-text">{{article.description}}</p>
              <button
              @click="abrirModal"
+             :id="article.id"
              class="btn btn-dark btn-outline-dark rounded-0 text-light">Guardar ejercicio</button>
          </div>
          </div>
          </div>
      </div>
      </div>
+
+     
 </section>`,
 
-    // props: ['articles','img','title', 'description', 'id'],
+
     
      methods: {
      agregarEjercicio: function() {
-    //TENGO QUE PUSHEAR LO SELECCIONADO EN EL BOTON 'GUARDAR EJERCICIO', CUANDO ESE BOTON SE DISPARA A TRAVES DE ESTA FUNCION SE GUARDA EN 'EJERCICIOSGUARDADOS'
-    this.ejerciciosGuardados.push({
-        id: this.id,
-        img: this.img,
-        title: this.title,
-        description:this.description,
 
-        })  
-        this.modal = false;    
+        localStorage.setItem('eGuardados', JSON.stringify(this.ejerciciosGuardados));
+        this.modal = false; 
     },
 
-    abrirModal: function() {
+    abrirModal: function(event) {
         this.modal = true;
+        
+        if(event.target.id == 1){
+            const objetoHiit = {...this.articles[0]};
+            this.ejerciciosGuardados.push(objetoHiit);
+            console.log(objetoHiit)
+        }else if(event.target.id == 2){
+            const objetoFuerza = {...this.articles[1]};
+            this.ejerciciosGuardados.push(objetoFuerza)
+            console.log(objetoFuerza)
+        }else if(event.target.id == 3){
+            const objetoMeditacion = {...this.articles[2]};
+            this.ejerciciosGuardados.push(objetoMeditacion)
+            console.log(objetoMeditacion)
+        }
+        console.log(this.ejerciciosGuardados)
     },
 
     cerrarModal: function(){
         this.modal = false;
     }
-    }
+    },
 
- })
+   
+
+})
