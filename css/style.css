@@ -9,7 +9,8 @@ body {
 h1 {
     color: whitesmoke;
     font-size: 1.3rem;
-    padding: 1rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+    margin-bottom: 0;
     text-transform: uppercase;
 }
 

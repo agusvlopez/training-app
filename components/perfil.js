@@ -9,7 +9,7 @@ Vue.component('perfil', {
     template: 
    ` <div class="p-2">
         <h1>Mi perfil</h1>
-        <p class="text-light">Acá se encuentran tus ejercicios guardados</p>
+        <p class="text-light ps-3 p-2">Acá se encuentran tus ejercicios guardados</p>
         <div v-for="ejercicio in ejerciciosGuardados" class="container p-4">
         <div>
             <div class="m-2">

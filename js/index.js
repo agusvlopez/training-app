@@ -6,9 +6,10 @@ const home = {
 
 const entrenamientos = {
     template: 
-    `<entrenamientos>
+    `<div>
         <h1>Entrenamientos</h1>
-    </entrenamientos>
+        <entrenamientos></entrenamientos>
+    </div>
     `
  
 }
