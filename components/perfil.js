@@ -69,21 +69,7 @@ Vue.component('perfil', {
             }
 
 
-            // this.ejerciciosGuardados.splice(1);
-            // console.log(event.target.id)
-
-        // else if(event.target.id == 2){
-        //     let objetoFuerza2 = {...this.ejerciciosGuardados};
-        //     this.ejerciciosGuardados.splice(objetoFuerza2,1);
-        //     console.log(objetoFuerza2)
-        // }else if(event.target.id == 3){
-        //     let objetoMeditacion3 = {...this.ejerciciosGuardados};
-        //     this.ejerciciosGuardados.splice(objetoMeditacion3,1)
-        //     console.log(objetoMeditacion3)
-        // }
-
-
-        // localStorage.removeItem('eGuardados');
+            localStorage.removeItem('eGuardados');
         }
 
     }

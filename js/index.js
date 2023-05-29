@@ -46,14 +46,13 @@ const app = new Vue ({
         
     },
 
-    //ESTABA EMPEZANDO A HACER LO DEL LOGIN, ME FALTA HACER  EL SET ITEM 
     mounted(){
         const isLogin = JSON.parse(localStorage.getItem('login'));
-    
         if(isLogin) {
           this.login = true;
         }
-      },
+    },
+
     methods: {
 
     mostrarModalLogin () {
@@ -66,6 +65,7 @@ const app = new Vue ({
 
     iniciarSesion() {
         this.login = true;
+        localStorage.setItem('login','true');
         this.cerrarModalLogin();
     },
     

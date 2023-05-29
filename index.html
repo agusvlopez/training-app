@@ -46,8 +46,7 @@
                     :class="'nav-item' + (item.active ? ' active' : '')"
                     v-if="item.enable || login"
                     :key="item.id"
-                    v-if="filterEntrenamientos"
-                    >
+                    v-if="filterEntrenamientos">
                     <router-link
                      :to="item.url"
                       class="nav-link text-white" aria-current="page">
