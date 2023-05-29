@@ -24,3 +24,29 @@ h1 {
     background-repeat: no-repeat;
    
 }
+
+@media (min-width: 992px) { 
+
+    .home {
+        padding:2rem;
+        display: flex;
+        flex-direction: column;
+        
+    } 
+
+    .home img {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .home-iniciar-sesion {
+        text-align: center;
+        font-size: 1.2rem;
+        justify-content: space-around;
+    }
+
+    .home-toogle {
+       display: flex;
+    
+    }
+}

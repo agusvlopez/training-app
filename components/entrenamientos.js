@@ -36,7 +36,7 @@
     template: ` 
 <section>
 <div v-show="modal" class="modal text-white" tabindex="-1" style="display: block;">
-<div class="modal-dialog">
+<div class="modal-dialog container">
   <div class="modal-content bg-dark">
     <div class="modal-header">
       <p class="modal-title text-uppercase">Iniciar sesión</p>

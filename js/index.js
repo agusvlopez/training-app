@@ -75,8 +75,8 @@ const app = new Vue ({
                 this.mostrarModalLogin();
                    
             }else {   // si esta logueado... cierro sesion
-                   
-                    this.login = false;
+                localStorage.setItem('login','false');
+                this.login = false;
             }          
         },
     },

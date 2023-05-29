@@ -69,19 +69,19 @@
 <section>
             
   <div 
-  
-  :class="'p-3' + (login ? '' : ' d-flex justify-content-between')">  
+    :class="'p-3 home-iniciar-sesion ' + (login ? '' : ' d-flex justify-content-between')">  
     <p class="text-light pt-1 mb-1 align-self-center"> {{login ? '' : '¿Ya tenés una cuenta?'}}</p>   
     <router-link 
     v-for="item in links"
     v-if="item.url == '/entrenamientos'"
     :to="item.url"
-     :class="'text-light text-uppercase' + (login ? ' link-entrenar mb-3' : '')">
+     :class="'text-light text-uppercase' + (login ? ' link-entrenar mb-3' : '')"
+  >
       {{login ? '¡Empezar a entrenar!' : ''}} 
     </router-link>    
     <button 
      @click="toogleLogin"
-    :class="'rounded-0 btn p-2'  + (login ? ' btn-link text-light ps-0' : ' btn-outline-light text-uppe')" type="submit">
+    :class="'rounded-0 btn p-2 home-toogle '  + (login ? ' btn-link text-light ps-0' : ' btn-outline-light text-uppe')" type="submit">
     {{login ? 'Cerrar sesión' : 'Inicia Sesión'}}
     </button>
   </div>
