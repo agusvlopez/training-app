@@ -83,14 +83,14 @@
 
 
     
-     methods: {
+    methods: {
      agregarEjercicio: function() {
 
         localStorage.setItem('eGuardados', JSON.stringify(this.ejerciciosGuardados));
         this.modal = false; 
-    },
+        },
 
-    abrirModal: function(event) {
+        abrirModal: function(event) {
         this.modal = true;
         
         if(event.target.id == 1){

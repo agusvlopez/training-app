@@ -42,11 +42,11 @@ h1 {
     .home-iniciar-sesion {
         text-align: center;
         font-size: 1.2rem;
-        justify-content: space-around;
+        justify-content: center !important;
     }
 
     .home-toogle {
-       display: flex;
+      margin: 0 1rem;
     
     }
 }
